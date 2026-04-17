@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM maven:3.9.6-eclipse-temurin-11
+#FROM maven:3.9.6-eclipse-temurin-11
+FROM sberworks.ru/sbt/ci90000226_syla/kube_gen/mvn:latest
 
 # Install preprocessing script requirements
-RUN apt-get update && apt-get -y install git python3-pip && pip install urllib3==1.24.2
+#RUN apt-get update && apt-get -y install git python3-pip && pip install urllib3==1.24.2
 
 ARG OPENAPI_GENERATOR_COMMIT
 ARG GENERATION_XML_FILE
