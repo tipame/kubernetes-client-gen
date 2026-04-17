@@ -82,7 +82,7 @@ kubeclient::generator::generate_client() {
     # of the array instead (space separated)
     CLEANUP_DIRS_STRING="${CLEANUP_DIRS[@]}"
 
-    echo "--- Running generator inside container..."
+    echo "--- Running generator inside container... ${output_dir}"
     docker run --rm --security-opt="label=disable" -u $(id -u) \
         -e CLEANUP_DIRS="${CLEANUP_DIRS_STRING}" \
         -e KUBERNETES_BRANCH="${KUBERNETES_BRANCH}" \
